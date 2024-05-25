@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp1ttec8snc01"]
+
+[ext_resource type="Script" path="res://script/slot.gd" id="1_vfr2m"]
+
+[node name="Slot" type="ColorRect"]
+custom_minimum_size = Vector2(68, 68)
+color = Color(0.447059, 0.168627, 0.0666667, 1)
+script = ExtResource("1_vfr2m")
+
+[node name="Filter" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)

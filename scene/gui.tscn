@@ -1,0 +1,93 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8dv1vxtjconq"]
+
+[ext_resource type="Script" path="res://script/gui.gd" id="1_fxc27"]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fxc27")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="ChessBoard" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 200.0
+offset_top = -304.0
+offset_right = 750.0
+offset_bottom = 246.0
+grow_vertical = 2
+color = Color(0.317647, 0.203922, 0, 1)
+
+[node name="BoardGrid" type="GridContainer" parent="ChessBoard"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -272.0
+offset_top = -272.0
+offset_right = 272.0
+offset_bottom = 272.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+
+[node name="HandCard" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -456.0
+offset_top = -60.0
+offset_right = 244.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="GridContainer" type="GridContainer" parent="HandCard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 10
+columns = 5
+
+[node name="Card" type="ColorRect" parent="HandCard/GridContainer"]
+custom_minimum_size = Vector2(132, 184.8)
+layout_mode = 2
+color = Color(1, 0.52549, 1, 1)
+
+[node name="CardStack" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 914.0
+offset_top = 50.0
+offset_right = 1046.0
+offset_bottom = 234.8
+
+[node name="CardStack2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 914.0
+offset_top = 380.0
+offset_right = 1046.0
+offset_bottom = 564.8
